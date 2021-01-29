@@ -98,9 +98,12 @@ weather_data = json.loads(weather_json)
 
 
 #icon_one = weatherData['daily']['data'][0]['icon']
-icon_one = weather_data[0]['weather_code']['value']
-high_one = round(weather_data[0]['temp'][1]['max']['value'])
-low_one = round(weather_data[0]['temp'][0]['min']['value'])
+#icon_one = weather_data[0]['weather_code']['value']
+icon_one=""
+#high_one = round(weather_data[0]['temp'][1]['max']['value'])
+high_one = 11
+#low_one = round(weather_data[0]['temp'][0]['min']['value'])
+low_one = 4
 day_one = datetime.datetime.now().strftime('%a %b %d')
 latest_alert=""
 
@@ -113,7 +116,7 @@ print(icon_one , high_one, low_one, day_one)
 
 # Process the SVG
 output = codecs.open(template , 'r', encoding='utf-8').read()
-output = output.replace('ICON_ONE',icon_dict[icon_one])
+#output = output.replace('ICON_ONE',icon_dict[icon_one])
 output = output.replace('HIGH_ONE',str(high_one))
 output = output.replace('LOW_ONE',str(low_one)+"°C")
 output = output.replace('DAY_ONE',day_one)
