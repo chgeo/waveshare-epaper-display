@@ -4,7 +4,7 @@ import sys
 import os
 #picdir = os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))), 'pic')
 #libdir = os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))), 'lib')
-libdir = "/home/pi/e-Paper/RaspberryPi_JetsonNano/python/lib"
+libdir = "/home/pi/waveshare-epaper-sample/RaspberryPi_JetsonNano/python/lib"
 if os.path.exists(libdir):
     print("Found")
     sys.path.append(libdir)
@@ -13,7 +13,7 @@ import logging
 
 ##If you have a Waveshare v2 screen, try changing this to 
 #from waveshare_epd import epd7in5_V2 as epd7in5
-from waveshare_epd import epd7in5 as epd7in5
+from waveshare_epd import epd7in5_HD as epd7in5
 
 import time, datetime
 from PIL import Image
@@ -36,9 +36,12 @@ try:
     #Himage = Image.open("/home/pi/waveshare-epaper-display/screen-output.bmp")
     Himage = Image.open(sys.argv[1])
     epd.display(epd.getbuffer(Himage))
+
+    #time.sleep(5)
+    #epd.Clear()
+
     epd.sleep()
     epd.Dev_exit()
-
 except IOError as e:
     logging.info(e)
 
