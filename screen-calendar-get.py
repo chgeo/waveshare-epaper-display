@@ -70,7 +70,11 @@ while (i < 3):
     day=desc=''
     if (i < len(events)):
         start = events[i].dtstart.value.astimezone(get_localzone())
-        day = start.strftime('%a %-d.%-m. %H:%M')
+        end = events[i].dtend.value
+        if (type(end).__name__ == 'datetime'):
+            day = start.strftime('%a %-d.%-m. %H:%M')
+        else: # no end time (whole day event)
+            day = start.strftime('%a %-d.%-m.')
         desc = events[i].summary.value
         print(day, desc, start)
     output = output.replace('CAL_'+str(i),day)
