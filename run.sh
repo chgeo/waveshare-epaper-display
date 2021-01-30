@@ -9,8 +9,8 @@ current_hour=`date +"%H"`
 #sudo -E python3 screen-pihole-get.py show
 
 
-#figlet Calendar info
-#sudo -E python3 screen-calendar-get.py
+figlet Calendar info
+sudo -E python3 screen-calendar-get.py
 
 figlet Export
 # Inkscape can't export to BMP, so let's export to PNG first. 
