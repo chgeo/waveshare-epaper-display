@@ -24,6 +24,7 @@ if climacell_apikey=="":
 
 town_lat=49.341841200000005
 town_long=8.6640058
+locale.setlocale(locale.LC_TIME, os.getenv("LC_TIME",""))
 
 template = 'screen-template.svg'
 
@@ -91,7 +92,7 @@ latest_alert=""
 if 'alerts' in weather_data:
     latest_alert = html.escape(weather_data['alerts'][0]['event'])
 
-print(icon_one, high_one, low_one, day_one, latest_alert)
+print(icon_one, high_one, low_one, day_one, latest_alert, locale.getlocale())
 
 # Process the SVG
 output = codecs.open(template , 'r', encoding='utf-8').read()
