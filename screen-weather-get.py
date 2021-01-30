@@ -84,7 +84,7 @@ daily = weather_data['daily'][0]
 icon_one = current['weather'][0]['icon']
 high_one = round(daily['temp']['max'])
 low_one = round(daily['temp']['min'])
-day_one = datetime.datetime.now().strftime('%a %b %d')
+day_one = datetime.datetime.now().strftime('%a %-d.%-m.')
 
 latest_alert=""
 if 'alerts' in weather_data:
