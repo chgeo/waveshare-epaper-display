@@ -1,86 +1,80 @@
-from __future__ import print_function
-import datetime
-import time
-import pickle
+from datetime import datetime, date
+from time import time
+from tzlocal import get_localzone
+import locale
 import os.path
-from googleapiclient.discovery import build
-from google_auth_oauthlib.flow import InstalledAppFlow
-from google.auth.transport.requests import Request
-import codecs
 import os
+import sys
+import codecs
+import caldav
+import vobject
 
-# If modifying these scopes, delete the file token.pickle.
-SCOPES = ['https://www.googleapis.com/auth/calendar.readonly']
+locale.setlocale(locale.LC_TIME, os.getenv('LC_TIME',''))
+
+# convert dates w/o time to datetimes in local timezone
+def normalizeDatetime(d):
+    print (d, type(d).__name__)
+    if (type(d).__name__ == 'date'):
+        d = datetime.combine(d, datetime.min.time())
+    if (d.tzinfo is None or d.tzinfo.utcoffset(d) is None):
+        d = get_localzone().localize(d)
+    print (d, type(d).__name__)
+    return d
+
+user = os.getenv('APPLE_CAL_USER', '')
+passwd = os.getenv('APPLE_CAL_PASSWORD', '')
+if user == '' or passwd == '' :
+    print('APPLE_CAL_USER or APPLE_CAL_PASSWORD is missing')
+    sys.exit(1)
+
 template = 'screen-output-weather.svg'
-
-google_calendar_id=os.getenv("GOOGLE_CALENDAR_ID","primary")
-
-creds = None
-# The file token.pickle stores the user's access and refresh tokens, and is
-# created automatically when the authorization flow completes for the first
-# time.
-if os.path.exists('token.pickle'):
-    with open('token.pickle', 'rb') as token:
-        creds = pickle.load(token)
-# If there are no (valid) credentials available, let the user log in.
-if not creds or not creds.valid:
-    if creds and creds.expired and creds.refresh_token:
-        creds.refresh(Request())
-    else:
-        flow = InstalledAppFlow.from_client_secrets_file(
-            'credentials.json', SCOPES)
-        creds = flow.run_local_server()
-    # Save the credentials for the next run
-    with open('token.pickle', 'wb') as token:
-        pickle.dump(creds, token)
-
-service = build('calendar', 'v3', credentials=creds)
-
-
-events_result = None
+resultCal = None
 stale = True
 
-if(os.path.isfile(os.getcwd() + "/calendar.pickle")):
-    print("Found cached calendar response")
-    with open('calendar.pickle','rb') as cal:
-        events_result = pickle.load(cal)
-    stale=time.time() - os.path.getmtime(os.getcwd() + "/calendar.pickle") > (1*60*60)
+if (os.path.isfile(os.getcwd() + '/calendar.cal')):
+    print('Found cached calendar response')
+    with open('calendar.cal', 'r') as cal:
+        resultCal = vobject.readOne(cal)
+    stale=time() - os.path.getmtime(os.getcwd() + '/calendar.cal') > (1*60*60)
 
 if stale:
-    print("Pickle is stale, calling the Calendar API")
-    # Call the Calendar API
-    now = datetime.datetime.utcnow().isoformat() + 'Z' # 'Z' indicates UTC time
-    events_result = service.events().list(calendarId=google_calendar_id, timeMin=now,
-                                        maxResults=10, singleEvents=True,
-                                        orderBy='startTime').execute()
-    with open('calendar.pickle', 'wb') as cal:
-        pickle.dump(events_result, cal)
+    print('Calender data is stale, calling the Calendar API')
+    client = caldav.DAVClient('https://caldav.icloud.com/', username=user, password=passwd)
+    principal = client.principal()
+    resultCal = vobject.iCalendar()
+    for calendar in principal.calendars():
+        events = calendar.date_search(
+            start=datetime.utcnow(), #datetime(2015, 1, 1)
+            end=datetime(2024, 1, 1), expand=False)
+        for event in events:
+            vevent = event.vobject_instance.vevent
+            resultCal.add(vevent)
+        with open('calendar.cal', 'w') as cal:
+            print(resultCal.serialize(), file=cal)
 
-events = events_result.get('items', [])
-
-if not events:
+if not resultCal:
     print('No upcoming events found.')
 
-event_one = events[0]
-start = event_one['start'].get('dateTime', event_one['start'].get('date'))
-start = start[:10]
-day_one = time.strftime("%a %b %d",time.strptime(start,"%Y-%m-%d"))
-desc_one = event_one['summary']
-print(day_one, desc_one)
+events = []
+for event in resultCal.components():
+    if (event.name == 'VEVENT'):
+        # normalize dates, otherwise we can't compare them below
+        event.dtstart.value = normalizeDatetime(event.dtstart.value)
+        events.append(event)
 
-event_two = events[1]
-start = event_two['start'].get('dateTime', event_two['start'].get('date'))
-start = start[:10]
-day_two = time.strftime("%a %b %d",time.strptime(start,"%Y-%m-%d"))
-desc_two = event_two['summary']
-print(day_two, desc_two)
-
-
+events.sort(key=lambda k: k.dtstart.value)
 
 output = codecs.open(template , 'r', encoding='utf-8').read()
-output = output.replace('CAL_ONE',day_one)
-output = output.replace('CAL_DESC_ONE',desc_one)
-output = output.replace('CAL_TWO',day_two)
-output = output.replace('CAL_DESC_TWO',desc_two)
+i = 0
+while (i < 3):
+    day=desc=''
+    if (i < len(events)):
+        start = events[i].dtstart.value.astimezone(get_localzone())
+        day = start.strftime('%a %-d.%-m. %H:%M')
+        desc = events[i].summary.value
+        print(day, desc, start)
+    output = output.replace('CAL_'+str(i),day)
+    output = output.replace('CAL_DESC_'+str(i),desc)
+    i = i + 1
 
 codecs.open('screen-output-weather.svg', 'w', encoding='utf-8').write(output)
