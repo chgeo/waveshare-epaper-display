@@ -11,15 +11,15 @@ import vobject
 
 locale.setlocale(locale.LC_TIME, os.getenv('LC_TIME',''))
 
-# convert dates w/o time to datetimes in local timezone
-def normalizeDatetime(d):
-    # print (d, type(d).__name__)
-    if (type(d).__name__ == 'date'):
-        d = datetime.combine(d, datetime.min.time())
-    if (d.tzinfo is None or d.tzinfo.utcoffset(d) is None):
-        d = get_localzone().localize(d)
-    # print (d, type(d).__name__)
-    return d
+# normalize dates, otherwise we can't compare them
+def byStartDate(event):
+    d = dn = event.dtstart.value
+    if (type(dn).__name__ == 'date'):
+        dn = datetime.combine(dn, datetime.min.time())
+    if (dn.tzinfo is None or dn.tzinfo.utcoffset(dn) is None):
+        dn = get_localzone().localize(dn)
+    # print (d, '-->', dn)
+    return dn
 
 user = os.getenv('APPLE_CAL_USER', '')
 passwd = os.getenv('APPLE_CAL_PASSWORD', '')
@@ -58,24 +58,25 @@ if not resultCal:
 events = []
 for event in resultCal.components():
     if (event.name == 'VEVENT'):
-        # normalize dates, otherwise we can't compare them below
-        event.dtstart.value = normalizeDatetime(event.dtstart.value)
         events.append(event)
 
-events.sort(key=lambda k: k.dtstart.value)
+events.sort(key=byStartDate)
 
 output = codecs.open(template , 'r', encoding='utf-8').read()
 i = 0
-while (i < 3):
+while (i < 3): # we have 3 slots in the UI
     day=desc=''
     if (i < len(events)):
-        start = events[i].dtstart.value.astimezone(get_localzone())
-        end = events[i].dtend.value
-        if (type(end).__name__ == 'datetime'):
-            day = start.strftime('%a %-d.%-m. %H:%M')
-        else: # no end time (whole day event)
-            day = start.strftime('%a %-d.%-m.')
         desc = events[i].summary.value
+        start = events[i].dtstart.value
+        end = events[i].dtend.value
+        if (type(start).__name__ == 'date' and type(end).__name__ == 'date'):  # date (whole day event)
+            day = start.strftime('%a %-d.%-m.')
+            if (abs(start - end).days > 1): # show end date for multi-day events
+                day = day + end.strftime(' – %a %-d.%-m.')
+        else: # event within a day
+            start = start.astimezone(get_localzone())
+            day = start.strftime('%a %-d.%-m. %H:%M')
         print(day, desc, start)
     output = output.replace('CAL_'+str(i),day)
     output = output.replace('CAL_DESC_'+str(i),desc)
