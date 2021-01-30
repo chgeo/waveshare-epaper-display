@@ -15,10 +15,13 @@
    inkscape:version="1.0.2 (e86c8708, 2021-01-15)"
    sodipodi:docname="screen-template.svg">
   <rect
-     width="800"
-     height="480"
+     width="880"
+     height="528"
      id="rect3855"
-     fill="white" />
+     fill="#ffffff"
+     x="0"
+     y="2.1224432"
+     style="stroke-width:1.1" />
   <metadata
      id="metadata3203">
     <rdf:RDF>
@@ -44,12 +47,12 @@
      inkscape:window-height="847"
      id="namedview3201"
      showgrid="false"
-     inkscape:zoom="0.66821591"
-     inkscape:cx="359.19153"
-     inkscape:cy="231.50794"
+     inkscape:zoom="0.69738406"
+     inkscape:cx="400"
+     inkscape:cy="240"
      inkscape:window-x="0"
      inkscape:window-y="25"
-     inkscape:window-maximized="0"
+     inkscape:window-maximized="1"
      inkscape:current-layer="svg3095"
      inkscape:document-rotation="0"
      showguides="false">
@@ -320,23 +323,26 @@
   <text
      id="text3145"
      x="30"
-     y="125"
+     y="111"
      font-size="100px"
      style="font-weight:bold;font-size:100px;line-height:0%;font-family:'Nimbus Sans L'">TIME_NOW</text>
   <!-- </g> -->
   <g
-     transform="scale(1.2) translate(75 215)"
+     transform="matrix(0.88573033,0,0,0.86862725,62.153019,272.32386)"
      id="g3127">
     <use
-       xlink:href="#ICON_ONE"
-       id="use3129" />
+       xlink:href="#ICON_1"
+       id="use3129"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
   </g>
   <text
      id="text3141"
-     x="30"
-     y="35"
-     font-size="30px"
-     style="font-weight:bolder;font-size:30px;line-height:0%;font-family:'Nimbus Mono L'">ALERT_MESSAGE</text>
+     x="31.775063"
+     y="152.02591"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.66669999999999874px;line-height:0%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;">ALERT_MESSAGE</text>
   <text
      id="text3155"
      x="165"
@@ -345,10 +351,14 @@
      style="font-weight:bold;font-size:37px;line-height:0%;font-family:'Nimbus Sans L';text-anchor:middle">DAY_ONE</text>
   <text
      id="text3159"
-     x="155"
-     y="420"
+     x="163"
+     y="394"
      font-size="38px"
-     style="font-size:38px;line-height:0%;font-family:'Nimbus Sans L';text-anchor:middle">HIGH_ONE/LOW_ONE</text>
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28px;line-height:0%;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle"><tspan
+       sodipodi:role="line"
+       id="tspan1703"
+       x="163"
+       y="394">HIGH_LOW_1</tspan></text>
   <path
      d="m 301.08466,394.8254 v 70 h 3 v -235.5 h -3 z"
      id="path3197"
@@ -414,4 +424,11 @@
        x="328.9418"
        dy="25"
        id="tspan1053">CAL_DESC_2</tspan></text>
+  <text
+     id="text1380"
+     x="254.61166"
+     y="286.89676"
+     font-size="38px"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:57.2257px;line-height:0%;font-family:'Nimbus Sans L';-inkscape-font-specif^ation:'Nimbus Sans L, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;stroke-width:1.5896"
+     transform="scale(0.85036241,1.1759692)">TEMP</text>
 </svg>
