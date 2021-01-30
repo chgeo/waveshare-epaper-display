@@ -13,12 +13,12 @@ locale.setlocale(locale.LC_TIME, os.getenv('LC_TIME',''))
 
 # convert dates w/o time to datetimes in local timezone
 def normalizeDatetime(d):
-    print (d, type(d).__name__)
+    # print (d, type(d).__name__)
     if (type(d).__name__ == 'date'):
         d = datetime.combine(d, datetime.min.time())
     if (d.tzinfo is None or d.tzinfo.utcoffset(d) is None):
         d = get_localzone().localize(d)
-    print (d, type(d).__name__)
+    # print (d, type(d).__name__)
     return d
 
 user = os.getenv('APPLE_CAL_USER', '')
