@@ -4,6 +4,7 @@ import json
 import requests
 from xml.dom import minidom
 import datetime
+import locale
 import codecs
 import os.path
 import time
@@ -23,6 +24,7 @@ if climacell_apikey=="":
 
 town_lat=49.341841200000005
 town_long=8.6640058
+locale.setlocale(locale.LC_ALL, 'de_DE')
 
 template = 'screen-template.svg'
 
