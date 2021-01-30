@@ -21,54 +21,36 @@ if climacell_apikey=="":
     print("CLIMACELL_APIKEY is missing")
     sys.exit(1)
 
-town_lat=51.3656
-town_long=-0.1963
+town_lat=49.341841200000005
+town_long=8.6640058
 
 template = 'screen-template.svg'
 
 
 #Map Climacell icons to local icons
-#Reference: https://developer.climacell.co/v3/reference#data-layers-core
+#Reference: https://openweathermap.org/weather-conditions#Icon-list
 
 
 icon_dict={
-    'freezing_rain_heavy':'freezing_rain', 
-    'freezing_rain':'freezing_rain', 
-    'freezing_rain_light': 'freezing_rain' ,
-    'freezing_drizzle': 'freezing_rain',
-    'ice_pellets_heavy': 'ice_pellets',
-    'ice_pellets': 'ice_pellets',
-    'ice_pellets_light': 'rain_icepellets_mix',
-    'snow_heavy': 'snow',
-    'snow': 'snow',
-    'snow_light': 'rain_snow_mix',
-    'flurries': 'blizzard',
-    'tstorm': 'thundershower_rain',
-    'rain_heavy': 'rain_day',
-    'rain': 'rain_day',
-    'rain_light': 'rain_day',
-    'drizzle': 'rain_day',
-    'fog_light': 'scattered_clouds_fog',
-    'fog': 'foggy',
-    'cloudy': 'few_clouds',
-    'mostly_cloudy':'mostly_cloudy',
-    'partly_cloudy': 'few_clouds',
-    'mostly_clear': 'clear_sky_day', 
-    'clear': 'clear_sky_day'
+    '01d': 'clear_sky_day',
+    '02d': 'few_clouds',
+    '03d':'mostly_cloudy',
+    '04d': 'scattered_clouds_fog',
+    '09d': 'rain_day',
+    '10d': 'rain_day',
+    '11d': 'thundershower_rain',
+    '13d': 'snow',
+    '50d': 'foggy',
+    '01n': 'clearnight',
+    '02n': 'partlycloudynight',
+    '03n': 'partlycloudynight',
+    '04n': 'partlycloudynight',
+    '09n': 'rain_night',
+    '10n': 'rain_night',
+    '11n': 'thundershower_rain',
+    '13n': 'snow',
+    '50n': 'foggy'
 }
-
-
-dt = datetime.datetime.now(pytz.utc)
-city = LocationInfo(town_lat,town_long)
-s = sun(city.observer, date=dt)
-if dt > s["sunset"] or dt < s["sunrise"]:
-    icon_dict["clear"]="clearnight"
-    icon_dict["partly_cloudy"]="partlycloudynight"
-    icon_dict["cloudy"]="partlycloudynight"
-    icon_dict["rain"]="rain_night"
-    icon_dict["rain_light"]="rain_night"
-    icon_dict["rain_heavy"]="rain_night"
-    icon_dict["drizzle"]="rain_night"
 
 
 
@@ -85,8 +67,9 @@ if(os.path.isfile(os.getcwd() + "/apiresponse.json")):
 if(stale):
     try:
         print("Old file, attempting re-download")
-        url = "https://api.climacell.co/v3/weather/forecast/daily?lat={}&lon={}&unit_system=si&start_time=now&fields=temp%2Cweather_code&apikey={}".format(town_lat, town_long, climacell_apikey)
-        weather_json = requests.get(url).text
+        url = "https://api.openweathermap.org/data/2.5/onecall"
+        resp = requests.get(url, params={"lat":town_lat,"lon":town_long,"units":"metric","appid":climacell_apikey})
+        weather_json = resp.text
         with open(os.getcwd() + "/apiresponse.json", "w") as text_file:
             text_file.write(weather_json)
     except:
@@ -95,28 +78,23 @@ if(stale):
             weather_json = content_file.read()
 
 weather_data = json.loads(weather_json)
+current = weather_data['current']
+daily = weather_data['daily'][0]
 
-
-#icon_one = weatherData['daily']['data'][0]['icon']
-#icon_one = weather_data[0]['weather_code']['value']
-icon_one=""
-#high_one = round(weather_data[0]['temp'][1]['max']['value'])
-high_one = 11
-#low_one = round(weather_data[0]['temp'][0]['min']['value'])
-low_one = 4
+icon_one = current['weather'][0]['icon']
+high_one = round(daily['temp']['max'])
+low_one = round(daily['temp']['min'])
 day_one = datetime.datetime.now().strftime('%a %b %d')
+
 latest_alert=""
+if 'alerts' in weather_data:
+    latest_alert = html.escape(weather_data['alerts'][0]['event'])
 
-
-
-# if 'alerts' in weatherData:
-#     latest_alert = html.escape(weatherData['alerts'][0]['title'])
-
-print(icon_one , high_one, low_one, day_one)
+print(icon_one, high_one, low_one, day_one, latest_alert)
 
 # Process the SVG
 output = codecs.open(template , 'r', encoding='utf-8').read()
-#output = output.replace('ICON_ONE',icon_dict[icon_one])
+output = output.replace('ICON_ONE',icon_dict[icon_one])
 output = output.replace('HIGH_ONE',str(high_one))
 output = output.replace('LOW_ONE',str(low_one)+"°C")
 output = output.replace('DAY_ONE',day_one)
