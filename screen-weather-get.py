@@ -91,7 +91,8 @@ day_one = datetime.datetime.now().strftime('%a %-d.%-m.')
 
 latest_alert=""
 if 'alerts' in weather_data:
-    latest_alert = html.escape(weather_data['alerts'][0]['event'])
+    msg = weather_data['alerts'][0]['event']
+    latest_alert = html.escape(msg.capitalize())
 
 print(icon_one, high_one, low_one, day_one, latest_alert, locale.getlocale())
 
