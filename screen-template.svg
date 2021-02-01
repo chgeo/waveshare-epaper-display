@@ -427,8 +427,8 @@
        id="text3155"
        x="165"
        y="253"
-       font-size="37px"
-       style="font-weight:bold;font-size:37px;line-height:0%;font-family:'Nimbus Sans L';text-anchor:middle">DAY_1</text>
+       font-size="40px"
+       style="font-weight:bold;font-size:40px;line-height:0%;font-family:'Nimbus Sans L';text-anchor:middle">DAY_1</text>
     <text
        id="text3159"
        x="209"
@@ -465,8 +465,8 @@
        id="text289"
        x="165"
        y="253"
-       font-size="37px"
-       style="font-weight:bold;font-size:37px;line-height:0%;font-family:'Nimbus Sans L';text-anchor:middle">DAY_2</text>
+       font-size="40px"
+       style="font-weight:bold;font-size:40px;line-height:0%;font-family:'Nimbus Sans L';text-anchor:middle">DAY_2</text>
     <text
        id="text293"
        x="209"

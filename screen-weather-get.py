@@ -3,7 +3,7 @@
 import json
 import requests
 from xml.dom import minidom
-from datetime import datetime, date, timedelta
+from datetime import datetime, date
 import locale
 import codecs
 import os.path
@@ -88,15 +88,15 @@ temp1 = round(current['temp'])
 icon1 = current['weather'][0]['icon']
 high1 = round(daily1['temp']['max'])
 low1 = round(daily1['temp']['min'])
-day1 = datetime.now().strftime('%a %-d.%-m.')
-print(icon1, high1, low1, day1)
+day1 = datetime.fromtimestamp(current['dt']).strftime('%a %-d.%-m.')
+print(day1, temp1, high1, low1)
 
-temp2 = round(current['temp'])
-icon2 = current['weather'][0]['icon']
+temp2 = round(daily2['temp']['day'])
+icon2 = daily2['weather'][0]['icon']
 high2 = round(daily2['temp']['max'])
 low2 = round(daily2['temp']['min'])
-day2 = (date.today() + timedelta(days=1)).strftime('%a %-d.%-m.')
-print(icon2, high2, low2, day2)
+day2 = datetime.fromtimestamp(daily2['dt']).strftime('%a %-d.%-m.')
+print(day2, temp2, high2, low2)
 
 latest_alert=""
 if 'alerts' in weather_data:
