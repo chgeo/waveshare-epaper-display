@@ -487,25 +487,25 @@
      xml:space="preserve"
      style="font-weight:bold;font-size:40px;line-height:0%;font-family:'Nimbus Sans L';text-anchor:middle"
      x="518.29822"
-     y="86.667969"
+     y="78.667969"
      id="text1073"><tspan
        sodipodi:role="line"
        id="tspan1071"
        x="518.29822"
-       y="86.667969">STOCK1</tspan></text>
+       y="78.667969">STOCK1</tspan></text>
   <text
      id="text1111"
-     x="666.63739"
-     y="47.683594"
+     x="684.63733"
+     y="47.064468"
      font-size="34px"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:0%;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:end"><tspan
-       x="666.63739"
-       dy="25"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26px;font-family:monospace;-inkscape-font-specification:'Nimbus Sans L, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:0%;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:end;stroke-width:1"><tspan
+       x="684.63733"
+       dy="25.000008"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;font-family:monospace;-inkscape-font-specification:'Nimbus Sans L, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:1"
        id="tspan1107">STOCK_CLOSE1</tspan><tspan
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26px;font-family:monospace;-inkscape-font-specification:'Nimbus Sans L, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
-       x="666.63739"
-       dy="25"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;font-family:monospace;-inkscape-font-specification:'Nimbus Sans L, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:1"
+       x="684.63733"
+       dy="25.000008"
        id="tspan1109">STOCK_WINLOSS1</tspan></text>
   <path
      d="m 447.24262,91.301203 v 21.824827 h 2.68476 V 39.701065 h -2.68476 z"
