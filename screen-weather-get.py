@@ -108,7 +108,7 @@ if 'alerts' in weather_data:
 # Process the SVG
 output = codecs.open(template , 'r', encoding='utf-8').read()
 
-output = output.replace('TIME_NOW',datetime.now().strftime("%H:%M"))
+output = output.replace('NOW',datetime.now().strftime("%H:%M"))
 output = output.replace('ALERT_MESSAGE', latest_alert)
 
 output = output.replace('TEMP_1',str(temp1)+"°")
