@@ -1,19 +1,45 @@
-# from alpha_vantage.timeseries import TimeSeries
-#import matplotlib.pyplot as plt
 import codecs
+import time
+import os.path
+import time
+import sys
+import os
+import json
+from alpha_vantage.timeseries import TimeSeries
 
-# ts = TimeSeries(output_format='pandas')
-# data, meta_data = ts.get_daily('SAP.FRK')
-# open = data['1. open'][0]
-# close = data['4. close'][0]
-open = 108.52
-close = 104.86
+stale=True
+stocks_filepath = 'stocks.json'
+stock1_symbol = 'SAP.FRK'
+stock1_name = 'SAP'
+data={}
+
+if (os.path.isfile(os.getcwd() + stocks_filepath)):
+    with open(os.getcwd() + stocks_filepath, 'r') as content_file:
+        data = json.load(content_file)
+    stale=time.time() - os.path.getmtime(os.getcwd() + stocks_filepath) > (1*60*60)
+
+if stale:
+    try:
+        print('Stock data is stale, calling provider')
+        ts = TimeSeries(output_format='json')
+        data,_ = ts.get_daily(stock1_symbol)
+        with open(os.getcwd() + stocks_filepath, 'w') as text_file:
+            text_file.write(json.dumps(data))
+    except:
+        print('Failed to get new API response, will use older response')
+        with open(os.getcwd() + stocks_filepath, 'r') as content_file:
+          data = json.load(content_file)
+
+first = next(iter(data.values()))
+print (first)
+open = float(first['1. open'])
+close = float(first['4. close'])
 
 template = 'screen-output-weather.svg'
 output = codecs.open(template , 'r', encoding='utf-8').read()
 
-output = output.replace('STOCK1','SAP')
-output = output.replace('STOCK_CLOSE1', "{:.2f}".format(close))
-output = output.replace('STOCK_WINLOSS1', "{:.2f}".format(close-open))
+output = output.replace('STOCK1', stock1_name)
+output = output.replace('STOCK_CLOSE1', '{:.2f}'.format(close))
+output = output.replace('STOCK_WINLOSS1', '{:.2f}'.format(close - open))
 
 codecs.open('screen-output-weather.svg', 'w', encoding='utf-8').write(output)
