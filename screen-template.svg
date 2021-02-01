@@ -21,7 +21,7 @@
      fill="#ffffff"
      x="0"
      y="2.1224432"
-     style="stroke-width:1.1" />
+     style="stroke-width:1.1;stroke-miterlimit:4;stroke-dasharray:none;opacity:1;stroke:none;stroke-opacity:1" />
   <metadata
      id="metadata3203">
     <rdf:RDF>
@@ -330,19 +330,19 @@
      id="g3123"> -->
   <text
      id="text3145"
-     x="30"
+     x="22"
      y="111"
      font-size="100px"
      style="font-weight:bold;font-size:100px;line-height:0%;font-family:'Nimbus Sans L'">TIME_NOW</text>
   <!-- </g> -->
   <text
      id="text3141"
-     x="33.37402"
+     x="25.37402"
      y="152.02591"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.33330000000000126px;line-height:0%;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;">ALERT_MESSAGE</text>
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:0%;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">ALERT_MESSAGE</text>
   <g
      id="g283"
-     transform="translate(146)">
+     transform="translate(146,3.754)">
     <path
        d="m 301.08466,394.8254 v 70 h 3 v -235.5 h -3 z"
        id="path3197"
@@ -411,7 +411,7 @@
   </g>
   <g
      id="g267"
-     transform="translate(-48.368492)">
+     transform="translate(-56.368492)">
     <g
        transform="matrix(0.70670674,0,0,0.65353773,84.38714,280.36137)"
        id="g3127">
@@ -449,7 +449,7 @@
   </g>
   <g
      id="g297"
-     transform="translate(160.29668,-1.2890625e-4)">
+     transform="translate(152.29668,-1.2890625e-4)">
     <g
        transform="matrix(0.70670674,0,0,0.65353773,84.38714,280.36137)"
        id="g287">
