@@ -48,7 +48,7 @@
      id="namedview3201"
      showgrid="false"
      inkscape:zoom="0.69738406"
-     inkscape:cx="412.90537"
+     inkscape:cx="324.71867"
      inkscape:cy="252.90537"
      inkscape:window-x="0"
      inkscape:window-y="25"
@@ -336,7 +336,7 @@
      style="font-weight:bold;font-size:100px;line-height:0%;font-family:'Nimbus Sans L'">TIME_NOW</text>
   <!-- </g> -->
   <g
-     transform="matrix(0.70670674,0,0,0.65353773,84.387143,288.36137)"
+     transform="matrix(0.70670674,0,0,0.65353773,118.38714,282.36137)"
      id="g3127">
     <use
        xlink:href="#ICON_1"
@@ -357,16 +357,6 @@
      y="253"
      font-size="37px"
      style="font-weight:bold;font-size:37px;line-height:0%;font-family:'Nimbus Sans L';text-anchor:middle">DAY_ONE</text>
-  <text
-     id="text3159"
-     x="197"
-     y="358"
-     font-size="38px"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:0%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle"><tspan
-       sodipodi:role="line"
-       id="tspan1703"
-       x="197"
-       y="358">HIGH_LOW_1</tspan></text>
   <path
      d="m 301.08466,394.8254 v 70 h 3 v -235.5 h -3 z"
      id="path3197"
@@ -398,9 +388,9 @@
      style="font-size:29px;line-height:0%;font-family:'Nimbus Sans L'"><tspan
        x="330"
        dy="25"
-       style="font-size:23px"
+       style="font-size:25px"
        id="tspan703">CAL_0</tspan><tspan
-       style="font-weight:bold"
+       style="font-weight:bold;font-size:30px"
        x="330"
        dy="25"
        id="tspan705">CAL_DESC_0</tspan></text>
@@ -412,9 +402,9 @@
      style="font-size:29px;line-height:0%;font-family:'Nimbus Sans L'"><tspan
        x="330"
        dy="25"
-       style="font-size:23px"
+       style="font-size:25px"
        id="tspan708">CAL_1</tspan><tspan
-       style="font-weight:bold"
+       style="font-weight:bold;font-size:30px"
        x="330"
        dy="25"
        id="tspan710">CAL_DESC_1</tspan></text>
@@ -426,17 +416,27 @@
      style="font-size:29px;line-height:0%;font-family:'Nimbus Sans L'"><tspan
        x="328.9418"
        dy="25"
-       style="font-size:23px"
+       style="font-size:25px"
        id="tspan1051">CAL_2</tspan><tspan
-       style="font-weight:bold"
+       style="font-weight:bold;font-size:30px"
        x="328.9418"
        dy="25"
        id="tspan1053">CAL_DESC_2</tspan></text>
   <text
-     id="text1380"
-     x="222.15288"
-     y="304.04883"
+     id="text3159"
+     x="159"
+     y="465.46973"
      font-size="38px"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:49.813px;line-height:0%;font-family:'Nimbus Sans L';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;stroke-width:1.38369"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.6667px;line-height:0%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle"><tspan
+       sodipodi:role="line"
+       id="tspan1703"
+       x="159"
+       y="465.46973">HIGH_LOW_1</tspan></text>
+  <text
+     id="text1380"
+     x="181.49136"
+     y="398.87677"
+     font-size="38px"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:58.6667px;line-height:0%;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;stroke-width:1.38369"
      transform="scale(0.93454493,1.0700395)">TEMP</text>
 </svg>
