@@ -336,7 +336,7 @@
      style="font-weight:bold;font-size:100px;line-height:0%;font-family:'Nimbus Sans L'">TIME_NOW</text>
   <!-- </g> -->
   <g
-     transform="matrix(0.70670674,0,0,0.65353773,118.38714,282.36137)"
+     transform="matrix(0.70670674,0,0,0.65353773,84.38714,288.36137)"
      id="g3127">
     <use
        xlink:href="#ICON_1"
@@ -422,21 +422,25 @@
        x="328.9418"
        dy="25"
        id="tspan1053">CAL_DESC_2</tspan></text>
-  <text
-     id="text3159"
-     x="159"
-     y="465.46973"
-     font-size="38px"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.6667px;line-height:0%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle"><tspan
-       sodipodi:role="line"
-       id="tspan1703"
+  <g
+     id="g250"
+     transform="translate(50,-88)">
+    <text
+       id="text3159"
        x="159"
-       y="465.46973">HIGH_LOW_1</tspan></text>
-  <text
-     id="text1380"
-     x="181.49136"
-     y="398.87677"
-     font-size="38px"
-     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:58.6667px;line-height:0%;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;stroke-width:1.38369"
-     transform="scale(0.93454493,1.0700395)">TEMP</text>
+       y="457.46973"
+       font-size="38px"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.6667px;line-height:0%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle"><tspan
+         sodipodi:role="line"
+         id="tspan1703"
+         x="159"
+         y="457.46973">HIGH_LOW_1</tspan></text>
+    <text
+       id="text1380"
+       x="181.49136"
+       y="391.40045"
+       font-size="38px"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:58.6667px;line-height:0%;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;stroke-width:1.38369"
+       transform="scale(0.93454493,1.0700395)">TEMP</text>
+  </g>
 </svg>
