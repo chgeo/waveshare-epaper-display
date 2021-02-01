@@ -3,7 +3,7 @@
 import json
 import requests
 from xml.dom import minidom
-import datetime
+from datetime import datetime, date, timedelta
 import locale
 import codecs
 import os.path
@@ -81,35 +81,44 @@ if(stale):
 
 weather_data = json.loads(weather_json)
 current = weather_data['current']
-daily = weather_data['daily'][0]
+daily1 = weather_data['daily'][0]
+daily2 = weather_data['daily'][1]
 
-temp = round(current['temp'])
-icon_one = current['weather'][0]['icon']
-high_one = round(daily['temp']['max'])
-low_one = round(daily['temp']['min'])
-day_one = datetime.datetime.now().strftime('%a %-d.%-m.')
+temp1 = round(current['temp'])
+icon1 = current['weather'][0]['icon']
+high1 = round(daily1['temp']['max'])
+low1 = round(daily1['temp']['min'])
+day1 = datetime.now().strftime('%a %-d.%-m.')
+print(icon1, high1, low1, day1)
+
+temp2 = round(current['temp'])
+icon2 = current['weather'][0]['icon']
+high2 = round(daily2['temp']['max'])
+low2 = round(daily2['temp']['min'])
+day2 = (date.today() + timedelta(days=1)).strftime('%a %-d.%-m.')
+print(icon2, high2, low2, day2)
 
 latest_alert=""
 if 'alerts' in weather_data:
     msg = weather_data['alerts'][0]['event']
     latest_alert = html.escape(msg.capitalize())
+    print(latest_alert)
 
-print(icon_one, high_one, low_one, day_one, latest_alert, locale.getlocale())
 
 # Process the SVG
 output = codecs.open(template , 'r', encoding='utf-8').read()
-output = output.replace('TEMP',str(temp)+"°")
-output = output.replace('#ICON_1','#'+icon_dict[icon_one])
-output = output.replace('HIGH_LOW_1',str(high_one)+"° / "+str(low_one)+"°")
-output = output.replace('DAY_ONE',day_one)
 
-output = output.replace('TIME_NOW',datetime.datetime.now().strftime("%H:%M"))
-
+output = output.replace('TIME_NOW',datetime.now().strftime("%H:%M"))
 output = output.replace('ALERT_MESSAGE', latest_alert)
 
+output = output.replace('TEMP_1',str(temp1)+"°")
+output = output.replace('#ICON_1','#'+icon_dict[icon1])
+output = output.replace('HIGH_LOW_1',str(high1)+"° / "+str(low1)+"°")
+output = output.replace('DAY_1',day1)
+
+output = output.replace('TEMP_2',str(temp2)+"°")
+output = output.replace('#ICON_2','#'+icon_dict[icon2])
+output = output.replace('HIGH_LOW_2',str(high2)+"° / "+str(low2)+"°")
+output = output.replace('DAY_2',day2)
+
 codecs.open('screen-output-weather.svg', 'w', encoding='utf-8').write(output)
-
-
-
-
-
