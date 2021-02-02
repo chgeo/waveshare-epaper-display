@@ -12,11 +12,12 @@ stocks_filepath = 'stocks.json'
 stock1_symbol = 'SAP.FRK'
 stock1_name = 'SAP'
 data={}
+refreshDelay = 24*60*60  # for daily data
 
 if (os.path.isfile(os.getcwd() + stocks_filepath)):
     with open(os.getcwd() + stocks_filepath, 'r') as content_file:
         data = json.load(content_file)
-    stale=time.time() - os.path.getmtime(os.getcwd() + stocks_filepath) > (1*60*60)
+    stale=time.time() - os.path.getmtime(os.getcwd() + stocks_filepath) > refreshDelay
 
 if stale:
     try:
