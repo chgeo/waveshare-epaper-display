@@ -42,23 +42,28 @@ if (os.path.isfile(os.getcwd() + '/calendar.cal')):
 
 if stale:
     print('Calender data is stale, calling', calDavServer)
-    client = caldav.DAVClient(calDavServer, username=user, password=passwd)
-    principal = client.principal()
-    start = datetime.utcnow()
-    resultCal = vobject.iCalendar()
-    for calendar in principal.calendars():
-        events = calendar.date_search(
-            start=start,
-            end=(start + timedelta(weeks=weeksToSearch)),
-            expand=True)  # expands recurring events to their _next_ occurrence
-        for comp in events:
-            vevent = comp.vobject_instance.vevent
-            # Expanded recurring events contain 2 DTSTAMP lines, which is illegal,
-            # leading to errors on .serialize(). Fix is to remove one such line (or all?)
-            vevent.remove(vevent.dtstamp)
-            resultCal.add(vevent)
-        with open('calendar.cal', 'w') as cal:
-            cal.write(resultCal.serialize())
+    try:
+        client = caldav.DAVClient(calDavServer, username=user, password=passwd)
+        principal = client.principal()
+        start = datetime.utcnow()
+        resultCal = vobject.iCalendar()
+        for calendar in principal.calendars():
+            events = calendar.date_search(
+                start=start,
+                end=(start + timedelta(weeks=weeksToSearch)),
+                expand=True)  # expands recurring events to their _next_ occurrence
+            for comp in events:
+                vevent = comp.vobject_instance.vevent
+                # Expanded recurring events contain 2 DTSTAMP lines, which is illegal,
+                # leading to errors on .serialize(). Fix is to remove one such line (or all?)
+                vevent.remove(vevent.dtstamp)
+                resultCal.add(vevent)
+            with open('calendar.cal', 'w') as cal:
+                cal.write(resultCal.serialize())
+    except:
+        print('Failed to get new API response, will use older response')
+        with open('calendar.cal', 'r') as cal:
+            resultCal = vobject.readOne(cal)
 
 if not resultCal:
     print('No upcoming events found.')
