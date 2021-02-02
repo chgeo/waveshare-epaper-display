@@ -48,8 +48,8 @@
      id="namedview3201"
      showgrid="false"
      inkscape:zoom="0.69738406"
-     inkscape:cx="539.80819"
-     inkscape:cy="175.47314"
+     inkscape:cx="445.1688"
+     inkscape:cy="381.95908"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="1"
@@ -339,9 +339,9 @@
   <!-- </g> -->
   <text
      id="text3141"
-     x="25.37402"
-     y="152.02591"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;line-height:0%;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">ALERT_MESSAGE</text>
+     x="28.763624"
+     y="458.02591"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:24px;line-height:0%;font-family:'Nimbus Sans L';-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">ALERT_MESSAGE</text>
   <path
      d="m 447.08466,398.5794 v 70 h 3 v -235.5 h -3 z"
      id="path3197"
