@@ -8,7 +8,7 @@ import json
 from alpha_vantage.timeseries import TimeSeries
 
 stale=True
-stocks_filepath = 'stocks.json'
+stocks_filepath = '/stocks.json'
 stock1_symbol = 'SAP.FRK'
 stock1_name = 'SAP'
 data={}
@@ -35,12 +35,16 @@ first = next(iter(data.values()))
 print (first)
 open = float(first['1. open'])
 close = float(first['4. close'])
+diff = close - open
 
 template = 'screen-output-weather.svg'
 output = codecs.open(template , 'r', encoding='utf-8').read()
 
 output = output.replace('STOCK1', stock1_name)
 output = output.replace('STOCK_CLOSE1', '{:.2f}'.format(close))
-output = output.replace('STOCK_WINLOSS1', '{:.2f}'.format(close - open))
+diffText = '{:.2f}'.format(diff)
+if diff >= 0:
+    diffText = '+' + diffText
+output = output.replace('STOCK_WINLOSS1', diffText)
 
 codecs.open('screen-output-weather.svg', 'w', encoding='utf-8').write(output)
