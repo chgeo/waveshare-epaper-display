@@ -70,7 +70,9 @@ if(stale):
     try:
         print("Old file, attempting re-download")
         url = "https://api.openweathermap.org/data/2.5/onecall"
-        resp = requests.get(url, params={"lat":town_lat,"lon":town_long,"units":"metric","appid":climacell_apikey})
+        resp = requests.get(url, params={
+            "lat":town_lat,"lon":town_long,"units":"metric","lang":"de","exclude":"minutely","appid":climacell_apikey
+        })
         weather_json = resp.text
         with open(os.getcwd() + "/apiresponse.json", "w") as text_file:
             text_file.write(weather_json)
