@@ -14,6 +14,14 @@
    id="svg3095"
    inkscape:version="1.0.2 (e86c8708, 2021-01-15)"
    sodipodi:docname="screen-template.svg">
+  <rect
+     width="880"
+     height="528"
+     id="rect3855"
+     fill="#ffffff"
+     x="0"
+     y="2.1224432"
+     style="stroke-width:1.1;stroke-miterlimit:4;stroke-dasharray:none;opacity:1;stroke:none;stroke-opacity:1" />
   <metadata
      id="metadata3203">
     <rdf:RDF>
@@ -44,7 +52,7 @@
      inkscape:cy="381.95908"
      inkscape:window-x="0"
      inkscape:window-y="25"
-     inkscape:window-maximized="0"
+     inkscape:window-maximized="1"
      inkscape:current-layer="svg3095"
      inkscape:document-rotation="0"
      showguides="false">
@@ -506,24 +514,24 @@
      style="stroke-width:0.894917" />
   <text
      id="text1380-4"
-     x="398.6752"
-     y="67.701942"
+     x="399.56595"
+     y="69.112183"
      font-size="38px"
      style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:50.6667px;line-height:0%;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;stroke-width:1.38369"
      transform="scale(0.93454493,1.0700395)"><tspan
        sodipodi:role="line"
        id="tspan3117"
-       x="398.6752"
-       y="67.701942">22°</tspan></text>
+       x="399.56595"
+       y="69.112183">22°</tspan></text>
   <text
      id="text1380-4-2"
-     x="411.29221"
-     y="117.84629"
+     x="412.18295"
+     y="119.25654"
      font-size="38px"
      style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:50.6667px;line-height:0%;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;stroke-width:1.38369"
      transform="scale(0.93454493,1.0700395)"><tspan
        sodipodi:role="line"
        id="tspan3127"
-       x="411.29221"
-       y="117.84629">50%</tspan></text>
+       x="412.18295"
+       y="119.25654">50%</tspan></text>
 </svg>
