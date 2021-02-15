@@ -40,7 +40,7 @@ stale = True
 
 if (os.path.isfile(os.getcwd() + '/sensor.ini')):
     print('Found cached sensor data')
-    stale=time() - os.path.getmtime(os.getcwd() + '/sensor.ini') > (1*60*60)
+    stale=time() - os.path.getmtime(os.getcwd() + '/sensor.ini') > (15*60)
     config = configparser.ConfigParser()
     config.read('sensor.ini')
     temp = config['Sensor']['temperature']
