@@ -26,6 +26,7 @@ humidity = 0
 
 async def fetch_data(addr: str):
     async with BleakClient(addr) as client:
+        global temp, humidity
         await client.is_connected()
         temp = await client.read_gatt_char('0000fff2-0000-1000-8000-00805f9b34fb')
         temp = int(float_value(temp[0:2]) / 100)
