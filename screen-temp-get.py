@@ -1,41 +1,67 @@
 import asyncio
 import platform
-from bleak import BleakClient, BleakScanner
-from bleak.uuids import uuid16_dict
+from bleak import BleakClient
+import os
+import sys
+from time import time
+import configparser
+import codecs
 
-uuid16_dict = {v: k for k, v in uuid16_dict.items()}
-
-mac_addr = (
-    '24:71:89:cc:09:05'
+addr = (
+    '10:08:2C:21:DC:9E'
     if platform.system() != 'Darwin'
-    else 
-    '953FBFB2-8B50-4BDD-96DF-9BB7F995551A'
-)
-CURRENT_TIME = '0000{0:x}-0000-1000-8000-00805f9b34fb'.format(
-    uuid16_dict.get('Current Time')
-)
-BATTERY_LEVEL_UUID = '0000{0:x}-0000-1000-8000-00805f9b34fb'.format(
-    uuid16_dict.get('Battery Level')
-)
-MODEL_NBR_UUID = '0000{0:x}-0000-1000-8000-00805f9b34fb'.format(
-    uuid16_dict.get('Model Number String')
+    else
+    'CB8A04B0-864F-443D-85DE-D5158E9F9DC4'
 )
 
-async def print_services(mac_addr: str):
-    device = await BleakScanner.find_device_by_address(mac_addr)
-    async with BleakClient(device) as client:
-        # svcs = await client.get_services()
-        # for srv in svcs:
-        #   for char in srv.characteristics:
-        #     print(char)
-        
-        model_number = await client.read_gatt_char(MODEL_NBR_UUID)
-        print('Model Number: {0}'.format(''.join(map(chr, model_number))))
-        battery_level = await client.read_gatt_char(BATTERY_LEVEL_UUID)
-        print('Battery Level: {0}%'.format(int(battery_level[0])))
-        current_time = await client.read_gatt_char(CURRENT_TIME)
-        print('Current Time: {0}'.format(int(current_time[0])))
+def float_value(nums):
+    # check if temp is negative
+    num = (nums[1]<<8)|nums[0]
+    if nums[1] == 0xff:
+        num = -( (num ^ 0xffff ) + 1)
+    return float(num)
 
+temp = 0
+humidity = 0
 
-loop = asyncio.get_event_loop()
-loop.run_until_complete(print_services(mac_addr))
+async def fetch_data(addr: str):
+    async with BleakClient(addr) as client:
+        await client.is_connected()
+        temp = await client.read_gatt_char('0000fff2-0000-1000-8000-00805f9b34fb')
+        temp = int(float_value(temp[0:2]) / 100)
+        humidity = await client.read_gatt_char('0000fff5-0000-1000-8000-00805f9b34fb')
+        humidity = int(float_value(humidity[0:2]) / 10)
+        with open('sensor.ini', 'w') as configfile:
+            config = configparser.ConfigParser()
+            config['Sensor'] = { 'temperature': temp, 'humidity' : humidity }
+            config.write(configfile)
+
+stale = True
+
+if (os.path.isfile(os.getcwd() + '/sensor.ini')):
+    print('Found cached sensor data')
+    stale=time() - os.path.getmtime(os.getcwd() + '/sensor.ini') > (1*60*60)
+    config = configparser.ConfigParser()
+    config.read('sensor.ini')
+    temp = config['Sensor']['temperature']
+    humidity = config['Sensor']['humidity']
+
+if stale:
+    try:
+        loop = asyncio.get_event_loop()
+        loop.run_until_complete(fetch_data(addr))
+    except:
+        print('Failed to get new sensor data, will use older data')
+        config = configparser.ConfigParser()
+        config.read('sensor.ini')
+        temp = config['Sensor']['temperature']
+        humidity = config['Sensor']['humidity']
+
+print('{0} °'.format(temp))
+print('Humidity: {0} %'.format(humidity))
+
+template = 'screen-output-weather.svg'
+output = codecs.open(template , 'r', encoding='utf-8').read()
+output = output.replace('TEMP_INS', temp+"°")
+output = output.replace('HUMIDITY', humidity+"%")
+codecs.open('screen-output-weather.svg', 'w', encoding='utf-8').write(output)

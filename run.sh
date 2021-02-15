@@ -10,6 +10,9 @@ sudo -E python3 screen-calendar-get.py
 figlet Stock info
 sudo -E python3 screen-stocks-get.py
 
+figlet Sensor data
+sudo -E python3 screen-temp-get.py
+
 figlet Export
 # Inkscape can't export to BMP, so let's export to PNG first. 
 inkscape  screen-output-weather.svg --without-gui -e screen-output.png -w880 -h528 --export-dpi=150
