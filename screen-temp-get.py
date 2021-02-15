@@ -62,6 +62,6 @@ print('Humidity: {0} %'.format(humidity))
 
 template = 'screen-output-weather.svg'
 output = codecs.open(template , 'r', encoding='utf-8').read()
-output = output.replace('TEMP_INS', temp+"°")
-output = output.replace('HUMIDITY', humidity+"%")
+output = output.replace('TEMP_INS', str(temp)+"°")
+output = output.replace('HUMIDITY', str(humidity)+"%")
 codecs.open('screen-output-weather.svg', 'w', encoding='utf-8').write(output)
