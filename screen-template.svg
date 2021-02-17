@@ -330,25 +330,27 @@
      id="g3123"> -->
   <text
      id="text3145"
-     x="22"
+     x="8"
      y="111"
      font-size="100px"
-     style="font-weight:bold;font-size:100px;line-height:0%;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L, Bold';font-style:normal;font-stretch:normal;font-variant:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;"><tspan
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:100px;line-height:0%;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"><tspan
        sodipodi:role="line"
-       id="tspan1115">NOW</tspan></text>
+       id="tspan1115"
+       x="8"
+       y="111">NOW</tspan></text>
   <!-- </g> -->
   <text
      id="text3141"
-     x="28.763624"
+     x="14.763624"
      y="458.02591"
      style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:24px;line-height:0%;font-family:'Nimbus Sans L';-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">ALERT_MESSAGE</text>
   <path
-     d="m 447.08466,398.5794 v 70 h 3 v -235.5 h -3 z"
+     d="m 433.08466,398.5794 v 70 h 3 v -235.5 h -3 z"
      id="path3197"
      inkscape:connector-curvature="0" />
   <g
      id="calendar"
-     transform="matrix(0.1,0,0,0.1,476,224.211)">
+     transform="matrix(0.1,0,0,0.1,462,224.211)">
     <path
        style="fill:#090509"
        d="M 506.645,89.372 C 502.609,76.437 491.008,66.87 476.738,66.87 h -31.782 v 49.326 c 0,26.284 -21.39,47.674 -47.674,47.674 -26.284,0 -47.674,-21.39 -47.674,-47.674 V 66.87 H 158.753 v 49.326 c 0,26.284 -21.39,47.674 -47.674,47.674 -26.284,0 -47.674,-21.39 -47.674,-47.674 V 66.87 H 31.782 c -14.27,0 -25.903,9.567 -29.907,22.502 H 0 v 387.365 c 0,17.544 14.239,31.782 31.782,31.782 h 444.955 c 17.544,0 31.782,-14.239 31.782,-31.782 V 89.372 Z M 476.737,476.737 H 31.782 v -254.26 h 444.955 z"
@@ -367,49 +369,49 @@
   </g>
   <text
      id="textprcblock1"
-     x="476"
+     x="462"
      y="287.754"
      font-size="29px"
      style="font-size:29px;line-height:0%;font-family:'Nimbus Sans L'"><tspan
-       x="476"
+       x="462"
        dy="25"
        style="font-size:25px"
        id="tspan703">CAL_0</tspan><tspan
        style="font-weight:bold;font-size:30px"
-       x="476"
+       x="462"
        dy="25"
        id="tspan705">CAL_DESC_0</tspan></text>
   <text
      id="text712"
-     x="476"
+     x="462"
      y="351.754"
      font-size="29px"
      style="font-size:29px;line-height:0%;font-family:'Nimbus Sans L'"><tspan
-       x="476"
+       x="462"
        dy="25"
        style="font-size:25px"
        id="tspan708">CAL_1</tspan><tspan
        style="font-weight:bold;font-size:30px"
-       x="476"
+       x="462"
        dy="25"
        id="tspan710">CAL_DESC_1</tspan></text>
   <text
      id="text1055"
-     x="474.9418"
+     x="460.9418"
      y="415.37305"
      font-size="29px"
      style="font-size:29px;line-height:0%;font-family:'Nimbus Sans L'"><tspan
-       x="474.9418"
+       x="460.9418"
        dy="25"
        style="font-size:25px"
        id="tspan1051">CAL_2</tspan><tspan
        style="font-weight:bold;font-size:30px"
-       x="474.9418"
+       x="460.9418"
        dy="25"
        id="tspan1053">CAL_DESC_2</tspan></text>
   <g
      id="g267"
-     transform="translate(-56.368492)">
+     transform="translate(-70.368492)">
     <g
        transform="matrix(0.70670674,0,0,0.65353773,84.38714,280.36137)"
        id="g3127">
@@ -447,7 +449,7 @@
   </g>
   <g
      id="g297"
-     transform="translate(152.29668,-1.2890625e-4)">
+     transform="translate(138.29668,-1.2890625e-4)">
     <g
        transform="matrix(0.70670674,0,0,0.65353773,84.38714,280.36137)"
        id="g287">
@@ -486,48 +488,52 @@
   <text
      xml:space="preserve"
      style="font-weight:bold;font-size:40px;line-height:0%;font-family:'Nimbus Sans L';text-anchor:middle"
-     x="518.29822"
+     x="504.29822"
      y="78.667969"
      id="text1073"><tspan
        sodipodi:role="line"
        id="tspan1071"
-       x="518.29822"
+       x="504.29822"
        y="78.667969">STOCK1</tspan></text>
   <text
      id="text1111"
-     x="684.63733"
+     x="670.63733"
      y="47.064468"
      font-size="34px"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:0%;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:end;stroke-width:1"><tspan
-       x="684.63733"
+       x="670.63733"
        dy="25.000008"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;font-family:monospace;-inkscape-font-specification:'Nimbus Sans L, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:1"
        id="tspan1107">STOCK_CLOSE1</tspan><tspan
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;font-family:monospace;-inkscape-font-specification:'Nimbus Sans L, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:1"
-       x="684.63733"
+       x="670.63733"
        dy="25.000008"
        id="tspan1109">STOCK_WINLOSS1</tspan></text>
   <path
-     d="m 447.24262,91.301203 v 21.824827 h 2.68476 V 39.701065 h -2.68476 z"
+     d="m 433.24262,91.301203 v 21.824827 h 2.68476 V 39.701065 h -2.68476 z"
      id="path1113"
      inkscape:connector-curvature="0"
      style="stroke-width:0.894917" />
   <text
      id="text1380-4"
-     x="399.56595"
+     x="384.58542"
      y="69.112183"
      font-size="38px"
-     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:50.66669999999999874px;line-height:0%;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;stroke-width:1.38369;"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:50.6667px;line-height:0%;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;stroke-width:1.38369"
      transform="scale(0.93454493,1.0700395)"><tspan
        sodipodi:role="line"
-       id="tspan2822">TEMP_INS</tspan></text>
+       id="tspan2822"
+       x="384.58542"
+       y="69.112183">TEMP_INS</tspan></text>
   <text
      id="text1380-4-2"
-     x="412.18356"
+     x="397.20303"
      y="119.25654"
      font-size="38px"
-     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:50.66669999999999874px;line-height:0%;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;stroke-width:1.38369;"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:50.6667px;line-height:0%;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;stroke-width:1.38369"
      transform="scale(0.93454493,1.0700395)"><tspan
        sodipodi:role="line"
-       id="tspan2824">HUMIDITY</tspan></text>
+       id="tspan2824"
+       x="397.20303"
+       y="119.25654">HUMIDITY</tspan></text>
 </svg>
