@@ -18,7 +18,7 @@ def byStartDate(event):
     if (type(dn).__name__ == 'date'):
         dn = datetime.combine(dn, datetime.min.time())
     if (dn.tzinfo is None or dn.tzinfo.utcoffset(dn) is None):
-        dn = get_localzone().localize(dn)
+        dn = localzone.localize(dn)
     # print (d, '-->', dn)
     return dn
 
@@ -88,7 +88,6 @@ while (i < 3): # we have 3 slots in the UI
             if (abs(start - end).days > 1): # show end date for multi-day events
                 day = day + end.strftime(' – %a %-d.%-m.')
         else: # event with time, i.e. within a day
-            start = start.astimezone(localzone)
             day = start.strftime('%a %-d.%-m. %H:%M')
         print(day, desc)
     output = output.replace('CAL_'+str(i), day)
