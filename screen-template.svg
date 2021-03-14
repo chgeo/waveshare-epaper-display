@@ -366,56 +366,16 @@
   <text
      id="text3141"
      x="14.763624"
-     y="458.02591"
+     y="450.02591"
      style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:24px;line-height:0%;font-family:'Nimbus Sans L';-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">ALERT_MESSAGE</text>
   <path
-     d="m 433.08466,398.5794 v 70 h 3 v -235.5 h -3 z"
+     d="m 433.08466,392.6123 v 75.9671 h 3 V 213.00438 h -3 z"
      id="path3197"
-     inkscape:connector-curvature="0" />
-  <text
-     id="textprcblock1"
-     x="462"
-     y="287.754"
-     font-size="29px"
-     style="font-size:29px;line-height:0%;font-family:'Nimbus Sans L'"><tspan
-       x="462"
-       dy="25"
-       style="font-size:25px"
-       id="tspan703">CAL_0</tspan><tspan
-       style="font-weight:bold;font-size:30px"
-       x="462"
-       dy="25"
-       id="tspan705">CAL_DESC_0</tspan></text>
-  <text
-     id="text712"
-     x="462"
-     y="351.754"
-     font-size="29px"
-     style="font-size:29px;line-height:0%;font-family:'Nimbus Sans L'"><tspan
-       x="462"
-       dy="25"
-       style="font-size:25px"
-       id="tspan708">CAL_1</tspan><tspan
-       style="font-weight:bold;font-size:30px"
-       x="462"
-       dy="25"
-       id="tspan710">CAL_DESC_1</tspan></text>
-  <text
-     id="text1055"
-     x="460.9418"
-     y="415.37305"
-     font-size="29px"
-     style="font-size:29px;line-height:0%;font-family:'Nimbus Sans L'"><tspan
-       x="460.9418"
-       dy="25"
-       style="font-size:25px"
-       id="tspan1051">CAL_2</tspan><tspan
-       style="font-weight:bold;font-size:30px"
-       x="460.9418"
-       dy="25"
-       id="tspan1053">CAL_DESC_2</tspan></text>
+     inkscape:connector-curvature="0"
+     style="stroke-width:1.04175" />
   <g
-     id="g2963">
+     id="g2963"
+     transform="translate(0,-8)">
     <g
        transform="matrix(0.70670674,0,0,0.65353773,14.018648,280.36137)"
        id="g3127">
@@ -438,7 +398,7 @@
        x="138.63152"
        y="377.46973"
        font-size="38px"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.66669999999999874px;line-height:0%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.6667px;line-height:0%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle"><tspan
          sodipodi:role="line"
          id="tspan1703"
          x="138.63152"
@@ -463,7 +423,8 @@
        height="100%" />
   </g>
   <g
-     id="g3065">
+     id="g3065"
+     transform="translate(0,-8)">
     <text
        id="text289"
        x="303.29669"
@@ -475,7 +436,7 @@
        x="347.29669"
        y="377.4696"
        font-size="38px"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.66669999999999874px;line-height:0%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.6667px;line-height:0%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle"><tspan
          sodipodi:role="line"
          id="tspan291"
          x="347.29669"
@@ -530,20 +491,66 @@
   <text
      id="text1380-4-2"
      x="382.2225"
-     y="124.86381"
+     y="128.60197"
      font-size="38px"
      style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:56px;line-height:0%;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;stroke-width:1.38369"
      transform="scale(0.93454493,1.0700395)"><tspan
        sodipodi:role="line"
        id="tspan2824"
        x="382.2225"
-       y="124.86381">HUMIDITY</tspan></text>
-  <use
-     xlink:href="#calendar"
-     id="use4824"
-     x="0"
-     y="0"
-     width="100%"
-     height="100%"
-     transform="translate(0,-0.84)" />
+       y="128.60197">HUMIDITY</tspan></text>
+  <g
+     id="g5836"
+     transform="translate(0,-8)">
+    <text
+       id="textprcblock1"
+       x="462"
+       y="287.754"
+       font-size="29px"
+       style="font-size:29px;line-height:0%;font-family:'Nimbus Sans L'"><tspan
+         x="462"
+         dy="25"
+         style="font-size:25px"
+         id="tspan703">CAL_0</tspan><tspan
+         style="font-weight:bold;font-size:30px"
+         x="462"
+         dy="25"
+         id="tspan705">CAL_DESC_0</tspan></text>
+    <text
+       id="text712"
+       x="462"
+       y="351.754"
+       font-size="29px"
+       style="font-size:29px;line-height:0%;font-family:'Nimbus Sans L'"><tspan
+         x="462"
+         dy="25"
+         style="font-size:25px"
+         id="tspan708">CAL_1</tspan><tspan
+         style="font-weight:bold;font-size:30px"
+         x="462"
+         dy="25"
+         id="tspan710">CAL_DESC_1</tspan></text>
+    <text
+       id="text1055"
+       x="460.9418"
+       y="415.37305"
+       font-size="29px"
+       style="font-size:29px;line-height:0%;font-family:'Nimbus Sans L'"><tspan
+         x="460.9418"
+         dy="25"
+         style="font-size:25px"
+         id="tspan1051">CAL_2</tspan><tspan
+         style="font-weight:bold;font-size:30px"
+         x="460.9418"
+         dy="25"
+         id="tspan1053">CAL_DESC_2</tspan></text>
+    <use
+       xlink:href="#calendar"
+       id="use4824"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(0,-0.84)" />
+  </g>
 </svg>
