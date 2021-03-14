@@ -513,32 +513,31 @@
        dy="30"
        id="tspan1109">STOCK_WINLOSS1</tspan></text>
   <path
-     d="m 433.24262,91.301203 v 21.824827 h 2.68476 V 39.701065 h -2.68476 z"
+     d="m 433.24262,91.301203 v 21.824827 h 3 V 39.701065 h -3 z"
      id="path1113"
-     inkscape:connector-curvature="0"
-     style="stroke-width:0.894917" />
+     inkscape:connector-curvature="0" />
   <text
      id="text1380-4"
-     x="373.88504"
+     x="369.60489"
      y="69.112183"
      font-size="38px"
      style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:56px;line-height:0%;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;stroke-width:1.38369"
      transform="scale(0.93454493,1.0700395)"><tspan
        sodipodi:role="line"
        id="tspan2822"
-       x="373.88504"
+       x="369.60489"
        y="69.112183">TEMP_INS</tspan></text>
   <text
      id="text1380-4-2"
-     x="386.50266"
-     y="119.25654"
+     x="382.2225"
+     y="124.86381"
      font-size="38px"
      style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:56px;line-height:0%;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;stroke-width:1.38369"
      transform="scale(0.93454493,1.0700395)"><tspan
        sodipodi:role="line"
        id="tspan2824"
-       x="386.50266"
-       y="119.25654">HUMIDITY</tspan></text>
+       x="382.2225"
+       y="124.86381">HUMIDITY</tspan></text>
   <use
      xlink:href="#calendar"
      id="use4824"
