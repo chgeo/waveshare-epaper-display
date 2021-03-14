@@ -324,6 +324,30 @@
          id="ICON_1"
          d="m42.732,50.287,3.955,5.841,7.365,0,3.398-5.841-3.58-6.22-7.379,0zm3.033,46.974,0-13.207-7.379,4.15-3.759-2.152,0-4.653,10.943-6.22,0-8.68-7.939,5.102,0-9.196-7.589,4.374,0,12.468-4.151,2.572-3.508-2.321,0-8.356-11.518,6.498-4.919-2.07,0-5.27,12.089-6.609-7.561-3.801,0-4.822,4.291-2.349,10.845,6.386,7.533-4.346-0.182-0.139-7.701-4.417,7.477-4.64-7.505-4.346-10.844,6.372-4.068-2.026,0-4.808,7.339-4.123-11.713-6.36,0-5.269,4.5-2.319,11.544,6.666,0-8.497,3.48-2.348,4.264,2.46-0.028,12.718,7.756,4.43-0.027-8.986,8.134,4.375,0-8.68-10.943-6.233,0-4.612,3.759-2.18,7.379,4.151,0-13.18,4.222-2.768,4.261,2.768,0,13.18,7.646-4.235,3.845,2.544,0,4.151-11.322,6.414,0,8.68,7.744-4.724,0,9.448,7.979-4.348,0-13.598,3.844-1.789,4.038,1.789,0,8.694,11.879-6.416,4.153,2.53,0,4.919-11.601,6.597,7.254,4.066,0,4.697-3.76,2.083-11.138-6.583-7.702,4.892,7.449,4.642-7.673,4.416,7.926,4.15,11.138-6.221,3.578,2.53,0,4.487-6.988,3.927,11.126,6.61,0,5.188-4.71,2.152-10.931-6.221,0,8.232-3.927,2.194-3.843-2.194,0-12.496-8.092-4.611,0,8.68-7.744-4.725,0,8.68,10.944,6.22,0,4.92-3.776,1.886-7.337-4.15,0,13.207-4.26,2.738z" />
     </symbol>
+    <symbol
+       id="symbol3269">
+      <title
+         id="title3263">CALENDAR</title>
+      <g
+         id="calendar"
+         transform="matrix(0.1,0,0,0.1,462,224.211)">
+        <path
+           style="fill:#090509"
+           d="M 506.645,89.372 C 502.609,76.437 491.008,66.87 476.738,66.87 h -31.782 v 49.326 c 0,26.284 -21.39,47.674 -47.674,47.674 -26.284,0 -47.674,-21.39 -47.674,-47.674 V 66.87 H 158.753 v 49.326 c 0,26.284 -21.39,47.674 -47.674,47.674 -26.284,0 -47.674,-21.39 -47.674,-47.674 V 66.87 H 31.782 c -14.27,0 -25.903,9.567 -29.907,22.502 H 0 v 387.365 c 0,17.544 14.239,31.782 31.782,31.782 h 444.955 c 17.544,0 31.782,-14.239 31.782,-31.782 V 89.372 Z M 476.737,476.737 H 31.782 v -254.26 h 444.955 z"
+           id="path132"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#090509"
+           d="m 111.08,132.088 c 8.772,0 15.891,-7.119 15.891,-15.891 V 15.891 C 126.971,7.119 119.852,0 111.08,0 102.308,0 95.189,7.119 95.189,15.891 v 100.306 c 0,8.772 7.119,15.891 15.891,15.891 z"
+           id="path134"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#090509"
+           d="m 397.281,132.088 c 8.74,0 15.891,-7.119 15.891,-15.891 V 15.891 C 413.172,7.119 406.021,0 397.281,0 388.541,0 381.39,7.119 381.39,15.891 v 100.306 c 0,8.772 7.151,15.891 15.891,15.891 z"
+           id="path136"
+           inkscape:connector-curvature="0" />
+      </g>
+    </symbol>
   </defs>
   <!-- <g
      transform="matrix(1.7166581,0,0,1.4427701,62.786598,36.074275)"
@@ -348,25 +372,6 @@
      d="m 433.08466,398.5794 v 70 h 3 v -235.5 h -3 z"
      id="path3197"
      inkscape:connector-curvature="0" />
-  <g
-     id="calendar"
-     transform="matrix(0.1,0,0,0.1,462,224.211)">
-    <path
-       style="fill:#090509"
-       d="M 506.645,89.372 C 502.609,76.437 491.008,66.87 476.738,66.87 h -31.782 v 49.326 c 0,26.284 -21.39,47.674 -47.674,47.674 -26.284,0 -47.674,-21.39 -47.674,-47.674 V 66.87 H 158.753 v 49.326 c 0,26.284 -21.39,47.674 -47.674,47.674 -26.284,0 -47.674,-21.39 -47.674,-47.674 V 66.87 H 31.782 c -14.27,0 -25.903,9.567 -29.907,22.502 H 0 v 387.365 c 0,17.544 14.239,31.782 31.782,31.782 h 444.955 c 17.544,0 31.782,-14.239 31.782,-31.782 V 89.372 Z M 476.737,476.737 H 31.782 v -254.26 h 444.955 z"
-       id="path132"
-       inkscape:connector-curvature="0" />
-    <path
-       style="fill:#090509"
-       d="m 111.08,132.088 c 8.772,0 15.891,-7.119 15.891,-15.891 V 15.891 C 126.971,7.119 119.852,0 111.08,0 102.308,0 95.189,7.119 95.189,15.891 v 100.306 c 0,8.772 7.119,15.891 15.891,15.891 z"
-       id="path134"
-       inkscape:connector-curvature="0" />
-    <path
-       style="fill:#090509"
-       d="m 397.281,132.088 c 8.74,0 15.891,-7.119 15.891,-15.891 V 15.891 C 413.172,7.119 406.021,0 397.281,0 388.541,0 381.39,7.119 381.39,15.891 v 100.306 c 0,8.772 7.151,15.891 15.891,15.891 z"
-       id="path136"
-       inkscape:connector-curvature="0" />
-  </g>
   <text
      id="textprcblock1"
      x="462"
@@ -410,10 +415,9 @@
        dy="25"
        id="tspan1053">CAL_DESC_2</tspan></text>
   <g
-     id="g267"
-     transform="translate(-70.368492)">
+     id="g2963">
     <g
-       transform="matrix(0.70670674,0,0,0.65353773,84.38714,280.36137)"
+       transform="matrix(0.70670674,0,0,0.65353773,14.018648,280.36137)"
        id="g3127">
       <use
          xlink:href="#ICON_1"
@@ -425,89 +429,88 @@
     </g>
     <text
        id="text3155"
-       x="165"
+       x="94.631508"
        y="253"
        font-size="40px"
        style="font-weight:bold;font-size:40px;line-height:0%;font-family:'Nimbus Sans L';text-anchor:middle">DAY_1</text>
     <text
        id="text3159"
-       x="209"
-       y="373.46973"
+       x="138.63152"
+       y="377.46973"
        font-size="38px"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:0%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.66669999999999874px;line-height:0%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;"><tspan
          sodipodi:role="line"
          id="tspan1703"
-         x="209"
-         y="373.46973">HIGH_LOW_1</tspan></text>
+         x="138.63152"
+         y="377.46973">HIGH_LOW_1</tspan></text>
     <text
        id="text1380"
-       x="234.99333"
-       y="309.16049"
-       font-size="38px"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:58.6667px;line-height:0%;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;stroke-width:1.38369"
+       x="159.69626"
+       y="312.89865"
+       font-size="40px"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:61.3333px;line-height:0%;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;stroke-width:1.38369"
        transform="scale(0.93454493,1.0700395)">TEMP_1</text>
   </g>
   <g
-     id="g297"
-     transform="translate(138.29668,-1.2890625e-4)">
-    <g
-       transform="matrix(0.70670674,0,0,0.65353773,84.38714,280.36137)"
-       id="g287">
-      <use
-         xlink:href="#ICON_2"
-         id="use285"
-         x="0"
-         y="0"
-         width="100%"
-         height="100%" />
-    </g>
+     transform="matrix(0.70670674,0,0,0.65353773,222.68382,280.36124)"
+     id="g287">
+    <use
+       xlink:href="#ICON_2"
+       id="use285"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+  </g>
+  <g
+     id="g3065">
     <text
        id="text289"
-       x="165"
-       y="253"
+       x="303.29669"
+       y="252.99988"
        font-size="40px"
        style="font-weight:bold;font-size:40px;line-height:0%;font-family:'Nimbus Sans L';text-anchor:middle">DAY_2</text>
     <text
        id="text293"
-       x="209"
-       y="373.46973"
+       x="347.29669"
+       y="377.4696"
        font-size="38px"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:0%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.66669999999999874px;line-height:0%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;"><tspan
          sodipodi:role="line"
          id="tspan291"
-         x="209"
-         y="373.46973">HIGH_LOW_2</tspan></text>
+         x="347.29669"
+         y="377.4696">HIGH_LOW_2</tspan></text>
     <text
        id="text295"
-       x="234.99333"
-       y="309.16049"
+       x="382.97623"
+       y="312.89853"
        font-size="38px"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:58.6667px;line-height:0%;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;stroke-width:1.38369"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:61.3333px;line-height:0%;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;stroke-width:1.38369"
        transform="scale(0.93454493,1.0700395)">TEMP_2</text>
   </g>
   <text
      xml:space="preserve"
      style="font-weight:bold;font-size:40px;line-height:0%;font-family:'Nimbus Sans L';text-anchor:middle"
      x="504.29822"
-     y="78.667969"
+     y="82.667969"
      id="text1073"><tspan
        sodipodi:role="line"
        id="tspan1071"
        x="504.29822"
-       y="78.667969">STOCK1</tspan></text>
+       y="82.667969">STOCK1</tspan></text>
   <text
      id="text1111"
-     x="670.63733"
-     y="47.064468"
+     x="694.63733"
+     y="55.873039"
      font-size="34px"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:0%;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:end;stroke-width:1"><tspan
-       x="670.63733"
+       x="694.63733"
        dy="25.000008"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;font-family:monospace;-inkscape-font-specification:'Nimbus Sans L, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36px;font-family:monospace;-inkscape-font-specification:'Nimbus Sans L, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:1"
        id="tspan1107">STOCK_CLOSE1</tspan><tspan
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;font-family:monospace;-inkscape-font-specification:'Nimbus Sans L, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:1"
-       x="670.63733"
-       dy="25.000008"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26px;font-family:monospace;-inkscape-font-specification:'Nimbus Sans L, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:1"
+       x="694.63733"
+       dy="30"
        id="tspan1109">STOCK_WINLOSS1</tspan></text>
   <path
      d="m 433.24262,91.301203 v 21.824827 h 2.68476 V 39.701065 h -2.68476 z"
@@ -516,24 +519,32 @@
      style="stroke-width:0.894917" />
   <text
      id="text1380-4"
-     x="384.58542"
+     x="378.16519"
      y="69.112183"
      font-size="38px"
-     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:50.6667px;line-height:0%;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;stroke-width:1.38369"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:56px;line-height:0%;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;stroke-width:1.38369"
      transform="scale(0.93454493,1.0700395)"><tspan
        sodipodi:role="line"
        id="tspan2822"
-       x="384.58542"
+       x="378.16519"
        y="69.112183">TEMP_INS</tspan></text>
   <text
      id="text1380-4-2"
-     x="397.20303"
+     x="390.78281"
      y="119.25654"
      font-size="38px"
-     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:50.6667px;line-height:0%;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;stroke-width:1.38369"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:56px;line-height:0%;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;stroke-width:1.38369"
      transform="scale(0.93454493,1.0700395)"><tspan
        sodipodi:role="line"
        id="tspan2824"
-       x="397.20303"
+       x="390.78281"
        y="119.25654">HUMIDITY</tspan></text>
+  <use
+     xlink:href="#calendar"
+     id="use4824"
+     x="0"
+     y="0"
+     width="100%"
+     height="100%"
+     transform="translate(0,-0.84)" />
 </svg>
