@@ -8,6 +8,7 @@ import sys
 import codecs
 import caldav
 import vobject
+import logging
 
 locale.setlocale(locale.LC_TIME, os.getenv('LC_TIME',''))
 localzone = get_localzone()
@@ -61,6 +62,7 @@ if stale:
             with open('calendar.cal', 'w') as cal:
                 cal.write(resultCal.serialize())
     except:
+        logging.exception(e)
         print('Failed to get new API response, will use older response')
         with open('calendar.cal', 'r') as cal:
             resultCal = vobject.readOne(cal)
