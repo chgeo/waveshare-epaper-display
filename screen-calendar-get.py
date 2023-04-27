@@ -61,7 +61,7 @@ if stale:
                 resultCal.add(vevent)
             with open('calendar.cal', 'w') as cal:
                 cal.write(resultCal.serialize())
-    except:
+    except Exception as e:
         logging.exception(e)
         print('Failed to get new API response, will use older response')
         with open('calendar.cal', 'r') as cal:
