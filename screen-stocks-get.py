@@ -5,6 +5,7 @@ import time
 import sys
 import os
 import json
+# https://github.com/RomelTorres/alpha_vantage/blob/develop/alpha_vantage/timeseries.py
 from alpha_vantage.timeseries import TimeSeries
 
 stale=True
@@ -23,7 +24,7 @@ if stale:
     try:
         print('Stock data is stale, calling provider')
         ts = TimeSeries(output_format='json')
-        data,_ = ts.get_daily(stock1_symbol)
+        data,_ = ts.get_daily_adjusted(stock1_symbol)
         with open(os.getcwd() + stocks_filepath, 'w') as text_file:
             text_file.write(json.dumps(data))
     except:
